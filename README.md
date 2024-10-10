@@ -14,6 +14,3 @@ To stop project run
 `docker-compose down`
 
 =======
-# p08_kasa_agence_immobiliere_student_OC
-exercice refonte site web
->>>>>>> refs/remotes/origin/main
