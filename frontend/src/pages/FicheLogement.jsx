@@ -1,15 +1,38 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
+import React, { useEffect, useRef, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { logementService } from "@/_services/logement.service.jsx";
 
 const FicheLogement = () => {
-    
-    let {uid} = useParams()
-    console.log(uid)
+  const [propertie, setPropertie] = useState([]);
+  const flag = useRef(false);
+  let navigate = useNavigate();
 
-    return (
-        <div className='FicheLogement'>
-            fiche Logement avec (le Layout) une grande case, le titre du logement, en dessous sa ville, le nom du commercial, trois tag en dessous, une description cachée par défaut avec chevron, Equipements aussi, et enfin, un footer. 
-        </div>
-    )
+  // Récupération ID du logement
+  const { id } = useParams();
+
+  useEffect(() => {
+    if (flag.current === false) {
+      logementService
+        .getLocation(id)
+        .then((res) => {
+          setPropertie(res.data);
+        })
+        .catch((err) => console.log(err));
+    }
+
+    return () => (flag.current = true);
+  }, []);
+
+  return (
+    <div className="FicheLogement">
+      FicheLogement
+      <div className="Location">
+        <img src={propertie.cover}/>
+        <h2>{propertie.title}</h2>
+        <p>{propertie.description}</p>
+      </div>
+      
+    </div>
+  )
 }
-export default FicheLogement
+export default FicheLogement;

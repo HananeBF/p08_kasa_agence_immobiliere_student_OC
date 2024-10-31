@@ -5,7 +5,7 @@ import React from 'react'
         <div className='APropos'>
             à propos de Kasa
         </div>
-    );
-};
+    )
+}
 
 export default APropos

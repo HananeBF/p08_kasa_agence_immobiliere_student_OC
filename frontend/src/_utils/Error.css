@@ -1,0 +1,29 @@
+.Error{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+}
+.Error404,
+.Oups {
+    color: #FF6060;
+    font-family: Montserrat;
+    line-height: normal;
+    padding-bottom: 30px;
+    margin: 0;
+}
+
+.Error404 {
+    font-size: 12em;
+    font-weight: 600;
+    
+}
+
+.Oups {
+    font-size: 1.5em;
+    font-weight: 200;
+}
+
+.Retour {
+    font-size: 1em;
+}

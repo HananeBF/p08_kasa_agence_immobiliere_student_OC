@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './Error.css'
 
  const Error = () => {
     return (
         <div className="Error">
-            Erreur 404
+            <p className='Error404'>404</p>
             <p className='Oups'>Oups! La page que vous recherchez n'existe pas</p>
-            <p><Link to="/Home">Retourner à la page d'accueil</Link></p>
+            <p className='Retour'><Link to="/Home">Retourner à la page d'accueil</Link></p>
         </div>
     )
 }

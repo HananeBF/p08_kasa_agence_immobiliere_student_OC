@@ -1,9 +1,9 @@
 header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    height: 100px;
+    max-width: 100%;
+    max-height: fit-content;
+    gap: 25%;
     
 }
 
@@ -17,13 +17,11 @@ header nav ul {
     list-style-type: none;
     padding:0;
     display: inline-flex;
-    margin-left: 300px;
-
 }
 
 header nav ul li {
-    padding-left: 20px;
-    font-size: 20px;
+    padding-left: 1em;
+    font-size: 1em;
 }
 
 header a {
@@ -32,6 +30,8 @@ header a {
 }
 
 header img {
-    width: 210.32px;
-    height: 68px;
+    max-width: 15%;
+    max-height:min-content;
 }
+
+
