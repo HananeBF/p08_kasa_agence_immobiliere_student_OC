@@ -6,7 +6,7 @@ import Footer from '@/components/Footer'
 const Layout = () => {
     return (
         <div className='Layout'>
-            Layout
+            
             <Header />
             <Outlet />
             <Footer />

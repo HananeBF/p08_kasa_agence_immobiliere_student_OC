@@ -2,6 +2,8 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
+    height: 100px;
     
 }
 
@@ -20,6 +22,7 @@ header nav ul {
 
 header nav ul li {
     padding-left: 20px;
+    font-size: 20px;
 }
 
 header a {
@@ -27,3 +30,7 @@ header a {
     color: black;
 }
 
+header img {
+    width: 210.32px;
+    height: 68px;
+}

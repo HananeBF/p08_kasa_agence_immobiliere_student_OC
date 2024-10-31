@@ -1,12 +1,14 @@
 import React from 'react';
+import './Footer.css'
+import logo from '@/assets/FLOGO.png'
 
 const Footer = () => {
     return (
-        <div className='Footer'>
-            Le footer sur fond noir écrit en blanc, voir le fichier css attention portée sur le logo actuellement en png et non svg
-            <img src='@/assets/LOGO.png' />
-            © 2020 Kasa. All rights reserved
-        </div>
+        <footer className='Footer'>
+            
+            <img src={logo} className='logo' />
+            <p>© 2020 Kasa. All rights reserved</p>
+        </footer>
     );
 };
 
