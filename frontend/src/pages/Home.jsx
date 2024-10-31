@@ -1,13 +1,14 @@
-import React from 'react';
+import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
- const Home = () => {
+const Home = () => {
     let navigate = useNavigate()
 
     const logement = (userId) => {
         
         console.log('click')
-        navigate("../fiche-logement/"+userId, {replace:true})
+        navigate("@/pages/fiche-logement/"+userId, {replace:true})
     }
 
     return (
@@ -17,4 +18,4 @@ import { useNavigate } from 'react-router-dom'
         </div>
     )
 }
-export default Home;
+export default Home

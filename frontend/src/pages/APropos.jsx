@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
  const APropos = () => {
     return (
@@ -8,4 +8,4 @@ import React from 'react';
     );
 };
 
-export default APropos;
+export default APropos

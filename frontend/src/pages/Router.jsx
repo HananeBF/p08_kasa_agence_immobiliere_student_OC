@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
 
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom'
 import { Home, FicheLogement, APropos } from '@/pages/index'
 import Layout from '@/components/Layout'
 
-import Error from '@/_utils/Error';
+import Error from '@/_utils/Error'
 
 const Router = () => {
     return (
@@ -25,4 +25,4 @@ const Router = () => {
     );
 };
 
-export default Router;
+export default Router
