@@ -15,7 +15,7 @@ const Home = () => {
             logementService.getAllLocations()
             .then(res => {
 
-                console.log(res.data)
+                
                 setProperties(res.data)
             })
             .catch(err => console.log(err))

@@ -4,8 +4,6 @@ footer {
     text-align: center;
 }
 
-.logo {
-    color: white;
-    width: 20%;
-    height: 40px;
-}
+svg path {
+    fill: white; 
+  }
