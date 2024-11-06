@@ -1,77 +1,47 @@
 import React, { useEffect, useRef, useState } from 'react'
-
-import { useNavigate } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { logementService } from'@/_services/logement.service.jsx'
+import '@/App.css'
 
 const Home = () => {
+    
     let navigate = useNavigate()
     const [properties, setProperties] = useState([])
-    const flag = useRef(false)
-
     
-
     useEffect(() => {
+        logementService.getAllLocations()
+            .then(res => {
 
-    if(flag.current === false){
-             logementService.getAllLocations()
-                 .then(res => {
-                
-                    setProperties(res.data)
-                })
+                console.log(res.data)
+                setProperties(res.data)
+            })
+            .catch(err => console.log(err))
+    }, [])
 
-                 .catch(err => console.log(err))
-         }
-       
-        return () => flag.current = true
-     }, [])
-
-    const logement = (id) => {
-        
-        console.log('click')
-        navigate("@/pages/fiche-logement/"+id, {replace:true})
-    }
-
-    if(isLoading){
-        return <div>Loading...</div>
-    }
+    // const logementA = (id) => {
+    //     console.log('click')
+    //     navigate("./fiche-logement/"+id)
+    // }
 
     return (
         <div className='Home'>
-            Home une grande image avec un texte dedans,  et plein de composants logements avec des liens qui amène à des pages de fiches logement, et enfin le footer. Penser au onClick pour les logements pour que ce soit dynamique
-            <div className='AllProperties'>
-                
-                    <div className="annonces">
-                       
+            Home une grande image avec un texte dedans,  et plein de composants logements avec des liens qui amène à des pages de fiches logement,. Penser au onClick pour les logements pour que ce soit dynamique
+            <div className='galleryLocations'>
+                <div className="CardFlat">
+                    {
+                        properties.map(flat => (
+                        <Link to={`/fiche-logement/${flat.id}`} key={flat.id} className='Flat'>
+                            <img src={flat.cover} alt={flat.title}/>
+                            <p>{flat.title}</p>
+                           
+                             
+                        </Link>
 
-                        <table>
-                        <thead>
-                    <tr>
-                        <th></th>
-                        <th>#</th>
-                        <th>Nom</th>
-                        <th>Prénom</th>
-                        <th>Email</th>
-                        <th>Created</th>
-                    </tr>
-                        </thead>
-                            <tbody>
-                            {
-                                properties.map(logement => (
-                                <tr key={logement.id}>
-
-                                    {/* <td>{logement.cover}</td> */}
-                                    <td>{logement.id}</td>
-                                    <td>{logement.title}</td>
-                                </tr>                          
-                                ))
-                            }
-                            </tbody>
-                        </table>
-                        {/* </div> */}
-                    </div>
-                
+                       ))
+                    }
+                </div>
             </div>
+           
             
         </div>
     )
