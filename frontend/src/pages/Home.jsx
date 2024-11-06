@@ -7,15 +7,22 @@ const Home = () => {
     
     let navigate = useNavigate()
     const [properties, setProperties] = useState([])
+    const flag = useRef(false)
     
     useEffect(() => {
-        logementService.getAllLocations()
+
+        if(flag.current === false){
+            logementService.getAllLocations()
             .then(res => {
 
                 console.log(res.data)
                 setProperties(res.data)
             })
             .catch(err => console.log(err))
+        }
+
+        return () => flag.current = true
+        
     }, [])
 
     // const logementA = (id) => {
@@ -29,10 +36,10 @@ const Home = () => {
             <div className='galleryLocations'>
                 <div className="CardFlat">
                     {
-                        properties.map(flat => (
-                        <Link to={`/fiche-logement/${flat.id}`} key={flat.id} className='Flat'>
-                            <img src={flat.cover} alt={flat.title}/>
-                            <p>{flat.title}</p>
+                        properties.map(flats => (
+                        <Link to={`/fiche-logement/${flats.id}`} key={flats.id} className='Flat'>
+                            <img src={flats.cover} alt={flats.title}/>
+                            <p>{flats.title}</p>
                            
                              
                         </Link>
