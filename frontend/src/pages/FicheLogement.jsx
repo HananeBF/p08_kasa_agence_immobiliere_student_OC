@@ -1,41 +1,54 @@
 import React, { useRef, useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { logementService } from "@/_services/logement.service.jsx";
+import "@pages/FicheLogement.css";
 
 const FicheLogement = () => {
+  const [propertie, setPropertie] = useState([]);
   const flag = useRef(false);
-  let navigate = useNavigate();
 
+  //Extract ID of the Location
   const { id } = useParams();
   console.log(id);
-  const [propertie, setPropertie] = useState([])
 
   useEffect(() => {
     if (flag.current === false) {
       logementService
         .getLocation(id)
         .then((res) => {
-          console.log(res.data)
-          setPropertie(res.data)
+          console.log(res.data);
+          setPropertie(res.data);
         })
-        .catch((err) => console.log(err))
+        .catch((err) => console.log(err));
     }
 
-    return () => flag.current = true
-  }, [])
+    return () => (flag.current = true);
+  }, []);
 
   return (
     <div className="FicheLogement">
-      FicheLogement
       <div className="Location">
-
-        {
-        propertie.map(flat => (
-            <img src={flat.cover} />,
-            <h2>{flat.title}</h2>,
-            <p>{flat.description}</p>
-          )
-        )}
+        <div className="ImgLocation">
+          <img src={propertie.cover} />
+          <figure className="SliderImage" src={propertie.pictures} />
+          {/* mettre en place un slider ici */}
+        </div>
+        <div className="LocationTitle">
+          <h2>{propertie.title}</h2>
+          <p>{propertie.location}</p>
+          <div className="LocationHost">
+            <span>{propertie.host.name}</span>
+            <img src={propertie.host.picture}/>
+          </div>
+        </div>
+        <div className="DescriptionLocation">
+          <button type="button">Description</button>
+          <p>{propertie.description}</p>
+          <button type="button">Equipements</button>
+          <ul>
+            <li>{propertie.equipements}</li>
+          </ul>
+        </div>
       </div>
     </div>
   );

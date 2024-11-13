@@ -1,5 +1,5 @@
 import React from 'react'
-import './Footer.css'
+import '@/components/Footer.css'
 import logo from '@/assets/FLOGO.png'
 
 const Footer = () => {
@@ -7,7 +7,7 @@ const Footer = () => {
         <footer className='Footer'>
             
             <img src={logo} className='FooterLogo' />
-            <p>© 2020 Kasa. All rights reserved</p>
+            <p className='FooterText'>© 2020 Kasa. All rights reserved</p>
         </footer>
     )
 }

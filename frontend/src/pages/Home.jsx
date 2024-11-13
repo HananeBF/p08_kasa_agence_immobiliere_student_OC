@@ -29,9 +29,10 @@ const Home = () => {
 
     return (
         <div className='Home'>
-            <div>Home une grande image avec un texte dedans,  et plein de composants logements avec des liens qui amène à des pages de fiches logement,. Penser au onClick pour les logements pour que ce soit dynamique</div>
+            <div>Penser au onClick pour les logements pour que ce soit dynamique</div>
             <div className='Banner'>
-                <img src={Banner}></img>
+                <img src={Banner}/>
+                <span>Chez vous, partout et ailleurs</span>
             </div>
             <div className='galleryLocations'>
                 <div className="CardFlat">

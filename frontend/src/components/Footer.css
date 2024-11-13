@@ -1,9 +1,23 @@
 footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     background-color: black;
     color: white;
     text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
-svg path {
-    fill: white; 
+.FooterLogo {
+    display: flex;
+    width: 15%;
   }
+
+.FooterText {
+    display: flex;
+    width: 15%;
+}

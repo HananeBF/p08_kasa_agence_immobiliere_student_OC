@@ -1,21 +1,54 @@
-.Banner {
-    display:flex;
-    
-    width: 100%;
-    height: 70px;
-    border-radius: 15px;
 
+.Banner {
+    width: 100%;
+    height: 223px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.Banner img {
+    height:100%;
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 25px;
+    z-index: 1;
+    filter: contrast(1.35) brightness(0.60);
+}
+
+.Banner span {
+    font-size: 50px;
+    color: white;
+    text-align: left;
+    position: absolute;
+    font-weight: 700;
+    text-align: center;
+    top :0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: fit-content;
+    margin: auto;
+    z-index:2;
+  }
+
+.galleryLocations {
+    max-width: 100%;
 }
 
 .CardFlat {
     display: grid;
     grid-template-columns: repeat(3, 5fr);
     grid-gap: 40px;
-    width: 100%;
+    max-width: 100%;
     border-radius: 15px;
     background-color: #F6F6F6;
     border-radius: 15px;
-    padding: 2em;
+    padding: 1.5em;
     margin-top: 20px;
     margin-bottom: 20px;
   }
@@ -28,19 +61,21 @@
     height: 100%;
     position: relative;
     overflow: hidden;
+    
   }
   
   .imgLocation img {
     object-fit: cover;
     width: 100%;
     height: 100%;
-    border-radius: 15px;
+    border-radius: 10px;
     z-index: 1;
+    filter: contrast(1.35) brightness(0.75);
     
   }
   
   .imgLocation span {
-    font-size: 20px;
+    font-size: 18px;
     color: white;
     text-align: left;
     position: absolute;
