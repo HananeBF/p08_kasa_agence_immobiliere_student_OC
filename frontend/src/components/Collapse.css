@@ -1,30 +1,4 @@
-.APropos {
-    width: 100%;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-  .Picture {
-    width: 100%;
-    height: 223px;
-    border-radius: 15px;
-    position: relative;
-    overflow: hidden;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.Picture img {
-    height:100%;
-    position: relative;
-    overflow: hidden;
-    object-fit: cover;
-    width: 100%;
-    border-radius: 25px;
-}
-
-.Arguments {
+.Collapse {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,12 +12,12 @@
     display: flex;
     gap:0;
     flex-direction: column;
-    width: 100%;
+    
 }
 
-.ArgButton {
+
+.Button {
     display: flex;
-    justify-content: space-between;
     background-color: #FF6060;
     width: 100%;
     text-decoration: none;
@@ -59,17 +33,28 @@
     outline: none;
     font-size: 18px;
     font-weight: bold;
-    content: '\2303';
 }
+
+.Button:after {
+    content: '\2303';
+    color: white;
+    font-weight: 700;
+    float: right;
+    margin-left: 5px;
+  }
+
+.active:after {
+    content: "\2304";
+  }
+
 .Content {
     display: flex;
     margin-top:0;
     text-align: left;
     background-color: #F6F6F6;
     padding: 0 18px;
-    /* display: none; */
+    display: none;
     overflow: hidden;
     border-radius: 5px;
       
 }
-

@@ -24,6 +24,8 @@
     font-weight: 200;
 }
 
-.Retour {
+.Retour a {
     font-size: 1em;
+    text-decoration: underline solid black;
+    font-weight: 300;
 }

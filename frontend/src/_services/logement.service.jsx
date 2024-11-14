@@ -12,7 +12,6 @@ let getLocation = (id) => {
     return Axios.get('/properties/'+id)
 }
 
-
 // Declare  services for import
 export const logementService = {
     getAllLocations, getLocation

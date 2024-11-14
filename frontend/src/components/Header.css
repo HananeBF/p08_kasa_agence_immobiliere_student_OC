@@ -1,16 +1,18 @@
 header {
     display: flex;
     flex-direction: row;
-    max-width: 100%;
+    width: 100%;
     max-height: fit-content;
     gap: 25%;
-    
+    flex-grow: 4;
+    justify-content: first baseline;
 }
 
 header nav {
     display: flex;
     justify-content: flex-end;
     text-align: right;
+    flex-grow:2;
 }
 
 header nav ul {
@@ -21,18 +23,21 @@ header nav ul {
 
 header nav ul li {
     padding-left: 1em;
-    font-size: 1em;
+    font-size: 1.5em;
 }
 
 header nav a {
     text-decoration: none;
     color: black;
+    font-weight: 400;
 }
 
 header img {
-    max-width: 50%;
+    width: 60%;
     max-height:min-content;
     color: red;
+    flex-grow: 2;
+    justify-content: flex-start;
 }
 
 

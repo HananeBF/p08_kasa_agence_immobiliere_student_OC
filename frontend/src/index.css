@@ -1,10 +1,5 @@
-@font-face{
-  font-family: "Montserrat";
-  src:local("Montserrat"),
-  url('@/assets/fonts/Montserrat/Montserrat.ttf') 
-}
 :root {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.87);

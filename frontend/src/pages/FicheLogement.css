@@ -1,7 +1,7 @@
 .Location {
     display: flex;
     flex-direction: column;
-    width: 1440px;
+    width: 100%;
 }
 
 .ImgLocation {
@@ -23,56 +23,97 @@
     width: 100%;
     border-radius: 25px;
 }
-
+.LocationTitle {
+    display: flex;
+    gap:10%;
+}
 .LocationTitle h2 {
     color: #FF6060;
     font-weight: 500;
     font-size: 36px;
     text-align: left;
+    display: inline-flex;
+    justify-content: flex-start;
 }
 .LocationTitle p {
     color: black;
-    font-weight: 400;
-    font-size: 12px;
+    font-weight: 500;
+    font-size: 16px;
     text-align: left;
-}
-.DescriptionLocation{
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-.DescriptionLocation button {
     display: flex;
-    background-color: #FF6060;
-    color:white;
-    border-radius: 5px;
-    border: none;
-    width: 30%;
-    font-size:18px;
-    justify-content: left;
-    align-items: center;
+    justify-items: flex-start;
 }
 
-.DescriptionLocation p {
-    margin-top:0;
-    text-align: left;
-    background-color: #F6F6F6;
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
+.LocationHost {
+    display:inline-flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: first baseline;
+    color:#FF6060;
+    font-size: 18px;
+    width: 15%;
 }
-.DescriptionLocation ul li {
-    margin-top:0;
-    text-align: left;
-    background-color: #F6F6F6;
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-}
-
 .LocationHost img {
     width: 64px;
     height: 64px;
     border-radius: 50%;
+    display: inline-flex;
+    
+   
+}
+.DescriptionLocation {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    gap: 150px;
+    width: 100%;
+}
+
+.Collapse {
+    display: flex;
+    gap:0;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+}
+
+.Collapse button {
+    display: flex;
+    background-color: #FF6060;
+    width: 100%;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    text-align: left;
+    padding-left: 10px;
+    margin-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.Collapse p {
+    display: flex;
+    text-align: left;
+    background-color: #F6F6F6;
+    padding: 0 18px;
+    /*display: none;*/
+    overflow: hidden;
+    border-radius: 5px;
+    margin-top: 0;
+}
+.Collapse ul li {
+    display: flex;
+    text-align: left;
+    background-color: #F6F6F6;
+    border-radius: 0 0 5px 5px;
+    padding: 0 18px;
+    /*display: none;*/
+    overflow: hidden;
+    margin-top: 0;
 }
