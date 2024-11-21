@@ -11,7 +11,7 @@ const toggleCollapse = () => { setIsOpen(!isOpen) }
 
   return (
     <div className="CollapseComponent">
-      <div className="CollapseElement" id="CollapseElement">
+      <div className="CollapseElement">
         <button onClick={toggleCollapse} type="button" className="Button">
         {title} {isOpen ? <span className="Open">&#x2304;</span> : <span className="Close">&#x2303;</span> }
         </button>

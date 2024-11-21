@@ -14,6 +14,7 @@
     width: 100%;
     gap: 0;
     flex-direction: column;
+    align-items: center;
 
 }
 
@@ -26,6 +27,7 @@
     border-radius: 5px;
     color: white;
     text-align: left;
+    align-items: center;
     margin-bottom: 0;
     padding: 10px;
     cursor: pointer;
@@ -48,7 +50,7 @@
 
 .Open,
 .Close {
-    transform: rotate(180deg);
+    
     font-size: 30px;
     font-weight: 900;
     right: 15px;
@@ -64,9 +66,12 @@
     overflow: hidden;
     border-radius: 5px;
     list-style: none;
+    width: 100%;
 
 }
 
+
 .Content ul li {
     list-style: none;
+    
 }

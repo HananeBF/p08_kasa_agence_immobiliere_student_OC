@@ -29,47 +29,8 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
-    width: 70%;
+    width: 100%;
     gap: 20px;
     
-}
-
-.CollapseElement {
-    display: flex;
-    gap:0;
-    flex-direction: column;
-    width: 100%;
-}
-
-.ArgButton {
-    display: flex;
-    justify-content: space-between;
-    background-color: #FF6060;
-    width: 100%;
-    text-decoration: none;
-    border-radius: 5px;
-    color: white;
-    text-align: left;
-    padding-left: 10px;
-    margin-bottom: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    font-size: 18px;
-    font-weight: bold;
-    content: '\2303';
-}
-.Content {
-    display: flex;
-    margin-top:0;
-    text-align: left;
-    background-color: #F6F6F6;
-    padding: 20px 20px 10px;
-    /* display: none; */
-    overflow: hidden;
-    border-radius: 5px;
-      
 }
 

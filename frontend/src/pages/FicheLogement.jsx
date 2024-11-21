@@ -49,6 +49,11 @@ const FicheLogement = () => {
             <span>{propertie.host.name}</span>
             <img src={propertie.host.picture} />
           </div>
+          <div className="TagsLocation">
+          {propertie.tags.map((tag) => (
+                <span key={tag.id}>{tag}</span>
+              ))}
+          </div>
           
         </div>
         <div className="DescriptionLocation">
@@ -66,18 +71,7 @@ const FicheLogement = () => {
             </ul>
       </Collapse>
       </>
-          {/* <div className="Collapse">
-            <button type="button">Description</button>
-            <p>{propertie.description}</p>
-          </div>
-          <div className="Collapse">
-            <button type="button">Equipements</button>
-            <ul className="ListTools">
-              {propertie.equipments.map((tools) => (
-                <li key={tools.id}>{tools}</li>
-              ))}
-            </ul>
-          </div> */}
+          
         </div>
 
         
