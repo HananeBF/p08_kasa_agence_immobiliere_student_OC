@@ -2,50 +2,53 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { logementService } from "@/_services/logement.service.jsx";
 import "@pages/FicheLogement.css";
-import Slider from "@/components/Slider";
+import Slider from "@components/Slider";
+
+//import Collapse from "@components/Collapse";
 
 const FicheLogement = () => {
-  const [propertie, setPropertie] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [propertie, setPropertie] = useState([])
   const [load, setLoad] = useState(true)
+  const [slides, setSlides] = useState([])
+  
+  
 
   //Extract ID of the Location
   const { id } = useParams();
-  console.log(id);
+  
+
 
   useEffect(() => {
-   
-      logementService
-        .getLocation(id)
-        .then((res) => {
-          console.log(res.data);
-          setPropertie(res.data);
-          setLoad(false)
-        })
-        .catch((err) => console.log(err));
-    
+    logementService
+      .getLocation(id)
+      .then((res) => {
+        setPropertie(res.data);
+        console.log(res.data.pictures);
+        setLoad(false);
+        setSlides(res.data.pictures)       
+      })
+      .catch((err) => console.log(err));
   }, []);
+  
 
-  if(load) {
-    return <div>Loading...</div>
+  if (load) {
+    return <div>Chargement...</div>;
   }
 
   return (
     <div className="FicheLogement">
       <div className="Location">
-        <div className="ImgLocation">
-          <img src={propertie.cover} />  
-          
-        </div>
-        
+      <>
+          <Slider images={slides}/>
+      </>
+
         <div className="LocationTitle">
           <h2>{propertie.title}</h2>
           <div className="LocationHost">
             <span>{propertie.host.name}</span>
-            <img src={propertie.host.picture}/>
+            <img src={propertie.host.picture} />
           </div>
           <p>{propertie.location}</p>
-         
         </div>
         <div className="DescriptionLocation">
           <div className="Collapse">
@@ -54,20 +57,15 @@ const FicheLogement = () => {
           </div>
           <div className="Collapse">
             <button type="button">Equipements</button>
-            <ul>
-              <li>{propertie.equipements}</li>
+            <ul className="ListTools">
+              {propertie.equipments.map((tools) => (
+                <li key={tools.id}>{tools}</li>
+              ))}
             </ul>
           </div>
         </div>
-      </div>
-      <div>
-          <Slider>
-          {propertie.pictures.map((slide) => (
-          <div key={slide[currentIndex]} className="SlidesImages">
-            <img className="Slide" src={slide[currentIndex].url}/>
-          </div>
-        ))}
-          </Slider>
+
+        
       </div>
     </div>
   );

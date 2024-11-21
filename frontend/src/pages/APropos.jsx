@@ -3,6 +3,7 @@ import Picture from "@/assets/PictureAPropos.png";
 import "@pages/APropos.css";
 //import Collapse from "@components/Collapse";
 
+
 const APropos = () => {
 
   return (
@@ -65,6 +66,9 @@ const APropos = () => {
         </div>
         </div>
       </div>
+      {/* <>
+      <Collapse/>
+      </> */}
       
     </div>
   );
