@@ -4,7 +4,7 @@ import { logementService } from "@/_services/logement.service.jsx";
 import "@pages/FicheLogement.css";
 import Slider from "@components/Slider";
 
-//import Collapse from "@components/Collapse";
+import Collapse from "@components/Collapse";
 
 const FicheLogement = () => {
   const [propertie, setPropertie] = useState([])
@@ -44,14 +44,29 @@ const FicheLogement = () => {
 
         <div className="LocationTitle">
           <h2>{propertie.title}</h2>
+          <p>{propertie.location}</p>
           <div className="LocationHost">
             <span>{propertie.host.name}</span>
             <img src={propertie.host.picture} />
           </div>
-          <p>{propertie.location}</p>
+          
         </div>
         <div className="DescriptionLocation">
-          <div className="Collapse">
+        <>
+      <Collapse title="Description">
+      <p>{propertie.description}</p>
+      </Collapse>
+      </>
+      <>
+      <Collapse title="Equipements">
+      <ul className="ListTools">
+              {propertie.equipments.map((tools) => (
+                <li key={tools.id}>{tools}</li>
+              ))}
+            </ul>
+      </Collapse>
+      </>
+          {/* <div className="Collapse">
             <button type="button">Description</button>
             <p>{propertie.description}</p>
           </div>
@@ -62,7 +77,7 @@ const FicheLogement = () => {
                 <li key={tools.id}>{tools}</li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
 
         

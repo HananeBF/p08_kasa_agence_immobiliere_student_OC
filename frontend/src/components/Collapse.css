@@ -3,16 +3,18 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
-    width: 70%;
-    gap: 20px;
-    
+    width: 80%;
+    gap: 10px;
+    line-height: 1;
+
 }
 
 .CollapseElement {
     display: flex;
-    gap:0;
+    width: 100%;
+    gap: 0;
     flex-direction: column;
-    
+
 }
 
 
@@ -24,86 +26,47 @@
     border-radius: 5px;
     color: white;
     text-align: left;
-    padding-left: 10px;
     margin-bottom: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px;
     cursor: pointer;
     border: none;
     outline: none;
     font-size: 18px;
     font-weight: bold;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+
 }
 
-.Button:after {
-    content: '\2303';
-    color: white;
-    font-weight: 700;
-    float: right;
-    margin-left: 5px;
-  }
+.Button span.Open {
+    transform: rotate(180deg);
+}
 
-.active:after {
-    content: "\2304";
-  }
+.Button span.Close {
+    transform: rotate(180deg);
+}
+
+.Open,
+.Close {
+    transform: rotate(180deg);
+    font-size: 30px;
+    font-weight: 900;
+    right: 15px;
+}
+
 
 .Content {
     display: flex;
-    margin-top:0;
+    margin-top: 0;
     text-align: left;
     background-color: #F6F6F6;
-    padding: 20px 20px 10px ;
-    /* display: none; */
+    padding: 20px 20px 10px 10px;
     overflow: hidden;
     border-radius: 5px;
-      
+    list-style: none;
+
 }
 
-
-/* 
-.Collapse button {
-    display: flex;
-    background-color: #FF6060;
-    width: 100%;
-    text-decoration: none;
-    border-radius: 5px;
-    color: white;
-    text-align: left;
-    padding-left: 10px;
-    margin-bottom: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    font-size: 18px;
-    font-weight: 700;
-} */
-
-.Collapse p {
-    display: flex;
-    text-align: left;
-    background-color: #F6F6F6;
-    padding-top:20px;
-    padding-left:18px;
-    padding-bottom:10px;
-    /*display: none;*/
-    overflow: hidden;
-    border-radius: 5px;
-    margin-top: 0;
-}
-
-
-.Collapse ul {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    background-color: #F6F6F6;
-    border-radius: 0 0 5px 5px;
-    padding-top:20px;
-    padding-left:18px;
-    padding-bottom:10px;
-    /*display: none;*/
-    overflow: hidden;
-    margin-top: 0;
+.Content ul li {
+    list-style: none;
 }

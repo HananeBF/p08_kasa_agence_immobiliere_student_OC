@@ -26,13 +26,14 @@
 .LocationTitle {
     display: flex;
     gap:10%;
+    flex-direction: column;
 }
 .LocationTitle h2 {
     color: #FF6060;
     font-weight: 500;
     font-size: 36px;
     text-align: left;
-    display: inline-flex;
+    display: flex;
     justify-content: flex-start;
 }
 .LocationTitle p {
@@ -41,7 +42,7 @@
     font-size: 16px;
     text-align: left;
     display: flex;
-    justify-items: flex-start;
+    justify-content: flex-start;
 }
 
 .LocationHost {
