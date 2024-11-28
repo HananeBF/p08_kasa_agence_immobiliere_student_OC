@@ -3,17 +3,18 @@ import { useParams } from "react-router-dom";
 import { logementService } from "@/_services/logement.service.jsx";
 import "@pages/FicheLogement.css";
 import Slider from "@components/Slider";
-//import Rating from "@components/Rating"
+import Rating from "@components/Rating"
 import Collapse from "@components/Collapse";
+import Error from "@/_utils/Error"
 
 const FicheLogement = () => {
   const [propertie, setPropertie] = useState([]);
   const [load, setLoad] = useState(true);
   const [slides, setSlides] = useState([]);
+  const [rating, setRating] = useState(0);
 
-  const totalStars = useState(5);
 
-  //Extract ID of the Location
+  //Extract ID of the Location (idl)
   const { idl } = useParams();
 
   useEffect(() => {
@@ -21,16 +22,17 @@ const FicheLogement = () => {
       .getLocation(idl)
       .then((res) => {
         setPropertie(res.data);
-        console.log(res.data.pictures);
         setLoad(false);
         setSlides(res.data.pictures);
+        setRating(res.data.rating)
       })
-      .catch((err) => console.log(err));
-  }, []);
+      .catch((err) => <Error/>);
+  }, [])
 
   if (load) {
-    return <div>Chargement...</div>;
+    return <div>Chargement...</div>
   }
+  
 
   return (
     <div className="FicheLogement">
@@ -44,18 +46,22 @@ const FicheLogement = () => {
 
           <div className="LocationHost">
             <span>{propertie.host.name}</span>
-            <span>{propertie.rating}/5</span>
+            
             <img src={propertie.host.picture} />
           </div>
         </div>
         <div className="Localisation">
           <p>{propertie.location}</p>
           <div className="TagsLocation">
-            {propertie.tags.map((tag) => (
-              <span key={tag}>{tag}</span>
+            {propertie.tags.map((tag, id) => (
+              <span key={id}>{tag}</span>
             ))}
           </div>
+          
         </div>
+        <>
+          <Rating stars={rating} />
+          </>
         <div className="DescriptionLocation">
           
             <Collapse title="Description">
@@ -64,8 +70,8 @@ const FicheLogement = () => {
           
             <Collapse title="Equipements">
               <ul>
-                {propertie.equipments.map((tools) => (
-                  <li key={tools}>{tools}</li>
+                {propertie.equipments.map((tools, id) => (
+                  <li key={id}>{tools}</li>
                 ))}
               </ul>
             </Collapse>

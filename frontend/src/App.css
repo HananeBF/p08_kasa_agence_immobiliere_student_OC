@@ -3,11 +3,6 @@
   margin: 0 auto;
 }
 
-
-
-
-
-
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -20,6 +15,9 @@
 
 
 
-@media screen and (max-width: 1200px) {
+/* media less than 1024px like tablets, phone*/
+
+@media (max-width: 1024px) {
   /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
+
   }

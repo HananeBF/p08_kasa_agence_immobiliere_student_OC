@@ -17,6 +17,7 @@ const Router = () => {
             <Route path="/a-propos" element={<APropos />} />
 
             <Route path='*' element={<Error />} />
+            
           </Route>
 
         </Routes>

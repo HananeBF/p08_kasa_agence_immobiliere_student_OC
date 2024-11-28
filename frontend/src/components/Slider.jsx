@@ -7,15 +7,14 @@ const Slider = ({ images }) => {
 
   const nextImage = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    console.log(setCurrentIndex);
-    console.log(currentIndex);
+    
   };
 
   const prevImage = () => {
     setCurrentIndex(
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
-    console.log(currentIndex);
+   
   };
 
   return (

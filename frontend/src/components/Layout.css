@@ -3,10 +3,14 @@
 }
 
 main {
-    padding-left: 2%;
-    padding-right:2%;
+    width: 100%;
 }
 
-@media screen and (max-width: 1200px) {
+
+/* Medium and small devices (tablets, phones less/equal than 1024px) */
+@media (max-width: 1024px) {
     /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
+
+   
     }
+

@@ -17,13 +17,11 @@ header img {
     color: red;
     flex-grow: 2;
     justify-content: flex-start;
-    padding-left: 5%;
 }
 
 header nav {
     display: inline-flex;
     justify-content: flex-end;
-    text-align: right;
     flex-grow:2;
 }
 
@@ -49,22 +47,25 @@ header nav a.active {
 }
 
 
+/* media less than 1024px like tablets, phone*/
 
-@media screen and (max-width: 1200px) {
+@media (max-width: 1024px) {
     /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
     header {
-        gap:1%;
-        padding-block: 2%;
-
+        width: 100%;
+        padding:0;
+        gap: 5%;
     }
     header a img {
         width: 50%;       
     }
-   
+    
+    header nav {
+        width: 50%;
+    }
 
     header nav ul li {
-        padding-left: 0.5em;
-        padding-right: 0.5em;
+        padding-left: 1em;
         font-size: 0.75em;
         text-transform: uppercase;
     }

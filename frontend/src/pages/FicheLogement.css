@@ -96,7 +96,8 @@
 }
 
 
-@media screen and (max-width: 1200px) {
+/* media less than 1024px like tablets, phone*/
+@media screen and (max-width: 1024px) {
     /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
     }
 

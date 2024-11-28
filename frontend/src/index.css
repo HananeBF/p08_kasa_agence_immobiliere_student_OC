@@ -17,19 +17,22 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-}
-
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  
+  padding-left: 0;
+  padding-right: 0;
   
 }
 
 
-@media screen and (max-width: 1200px) {
+
+/* media less than 1024px like tablets, phone*/
+@media (max-width: 1024px) {
+
   /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
   }

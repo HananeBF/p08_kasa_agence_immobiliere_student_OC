@@ -1,11 +1,14 @@
 .Rating {
     display:flex;
+    color: #FF6060;
+    font-size: 20px;
     
 }
-.filledStars {
-    color: #FF6060;
+.stars.emptyStars{
+    color: #F6F6F6;
 }
 
 .emptyStars {
-    color: #F6F6F6;
+    color: #FF6060;
 }
+

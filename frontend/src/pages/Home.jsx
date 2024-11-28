@@ -27,7 +27,10 @@ const Home = () => {
     <div className="Home">
       <div className="Banner">
         <img src={Banner} />
-        <h1>Chez vous, <span className="Decoupe">partout et ailleurs</span></h1>
+
+        <h1>
+          Chez vous, <span className="Decoupe">partout et ailleurs</span>
+        </h1>
       </div>
       <div className="galleryLocations">
         <div className="CardFlat">
