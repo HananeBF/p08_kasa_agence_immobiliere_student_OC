@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import "@components/Slider.css";
 
 const Slider = ({ images }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextImage = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);

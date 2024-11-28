@@ -25,10 +25,12 @@
 }
 .LocationTitle {
     display: flex;
-    gap:10%;
-    flex-direction: column;
+    gap: 10%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-.LocationTitle h2 {
+.LocationTitle h1 {
     color: #FF6060;
     font-weight: 500;
     font-size: 36px;
@@ -36,7 +38,26 @@
     display: flex;
     justify-content: flex-start;
 }
-.LocationTitle p {
+
+.LocationHost {
+    display:inline-block;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: first baseline;
+    color:#FF6060;
+    font-size: 18px;
+    width: 15%;
+}
+.LocationHost img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: inline-flex;
+    
+   
+}
+
+.Localisation p {
     color: black;
     font-weight: 500;
     font-size: 16px;
@@ -64,30 +85,18 @@
     font-weight: 600;
 }
 
-.LocationHost {
-    display:inline-flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: first baseline;
-    color:#FF6060;
-    font-size: 18px;
-    width: 15%;
-}
-.LocationHost img {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    display: inline-flex;
-    
-   
-}
+
 .DescriptionLocation {
     display: inline-flex;
     flex-direction: row;
     align-items: flex-start;
     margin-bottom: 20px;
-    gap: 150px;
+    gap: 10%;
     width: 100%;
 }
 
+
+@media screen and (max-width: 1200px) {
+    /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
+    }
 

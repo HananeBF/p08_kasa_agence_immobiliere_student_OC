@@ -19,3 +19,7 @@ footer {
 .FooterText {
     display: flex;
 }
+
+@media screen and (max-width: 1200px) {
+    /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
+    }

@@ -8,8 +8,20 @@ header {
     justify-content: first baseline;
 }
 
+header a img {
+    width: 60%;
+}
+header img {
+    width: 80%;
+    max-height:min-content;
+    color: red;
+    flex-grow: 2;
+    justify-content: flex-start;
+    padding-left: 5%;
+}
+
 header nav {
-    display: flex;
+    display: inline-flex;
     justify-content: flex-end;
     text-align: right;
     flex-grow:2;
@@ -32,12 +44,28 @@ header nav a {
     font-weight: 400;
 }
 
-header img {
-    width: 60%;
-    max-height:min-content;
-    color: red;
-    flex-grow: 2;
-    justify-content: flex-start;
+header nav a.active {
+    text-decoration: underline;
 }
 
 
+
+@media screen and (max-width: 1200px) {
+    /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
+    header {
+        gap:1%;
+        padding-block: 2%;
+
+    }
+    header a img {
+        width: 50%;       
+    }
+   
+
+    header nav ul li {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        font-size: 0.75em;
+        text-transform: uppercase;
+    }
+    }

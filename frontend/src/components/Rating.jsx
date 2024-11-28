@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '@components/Rating.css'
 
 const Rating = ( { stars } ) => {
+     const [star, setStar] = useState([])
+     const totalRating = useState(5)
+     
+    const filledStars = () => {
+        setStar()
+    }
 
-    const stars = Array(5).fill(0)
+    
+    
+
     return (
         <div className='Rating'>
             

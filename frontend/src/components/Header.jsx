@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "./Header.css";
+import { Link, NavLink } from "react-router-dom";
+import "@components/Header.css";
 import logo from "@/assets/LOGO.svg";
 
 const Header = () => {
@@ -13,11 +13,11 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/home">Accueil</Link>
+            <NavLink to="/home">Accueil</NavLink>
           </li>
 
           <li>
-            <Link to="/a-propos">A Propos</Link>
+            <NavLink to="/a-propos">A Propos</NavLink>
           </li>
         </ul>
       </nav>

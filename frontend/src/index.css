@@ -8,39 +8,17 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin-top: 2em;
 }
 
-a {
-  font-weight: 500;
-  color: #000000;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #000000;
-  text-decoration: solid;
-}
+
 
 body {
   margin: 0;
-  display: flex;
-  /*place-items: center;*/
   min-width: 320px;
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-co lor;
-}
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -50,3 +28,8 @@ button:focus-visible {
   
   
 }
+
+
+@media screen and (max-width: 1200px) {
+  /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
+  }

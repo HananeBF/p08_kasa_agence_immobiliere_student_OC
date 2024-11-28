@@ -1,10 +1,11 @@
 .Rating {
-
+    display:flex;
+    
 }
-.stars.fill {
+.filledStars {
     color: #FF6060;
 }
 
-.starsEmpty {
+.emptyStars {
     color: #F6F6F6;
 }

@@ -40,6 +40,15 @@
 
 }
 
+@keyframes logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(180deg);
+    }
+  }
 .Button span.Open {
     transform: rotate(180deg);
 }
@@ -52,26 +61,38 @@
 .Close {
     
     font-size: 30px;
-    font-weight: 900;
-    right: 15px;
+    font-weight: bold;
+    
 }
 
 
 .Content {
     display: flex;
-    margin-top: 0;
+    margin: 0;
     text-align: left;
     background-color: #F6F6F6;
-    padding: 20px 20px 10px 10px;
     overflow: hidden;
     border-radius: 5px;
-    list-style: none;
     width: 100%;
 
+}
+
+.Content p {
+    display: flex;
+    max-width: 100%;
+    padding: 0px 0 0 15px;
 }
 
 
 .Content ul li {
     list-style: none;
+    display: flex;
+    max-width: 100%;
+    padding-left: 0;
+    
     
 }
+
+@media screen and (max-width: 1200px) {
+    /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
+    }
