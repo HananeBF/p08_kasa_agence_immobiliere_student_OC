@@ -27,42 +27,40 @@
     border-radius: 5px;
     color: white;
     text-align: left;
-    align-items: center;
     margin-bottom: 0;
     cursor: pointer;
     border: none;
     outline: none;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 5px;
-    padding-bottom: 15px;
-    font-size: 25px;
-    font-weight: 500;
+    padding-bottom: 5px;
 
 }
+
 .Button img {
-    width:40px;
+    width: 40px;
 }
 
 
 .icon {
-    display:inline-flex;
+    display: inline-flex;
     justify-content: flex-end;
-    
-    transition: transform 500ms ease, translateY 500ms ease; 
+    transition: transform 500ms ease, translateY 500ms ease;
+    align-items: center;
+
+}
+
+.icon.rotate {
+    transform: rotate(180deg);
+    display: inline-flex;
     align-items: baseline;
-   
-} 
-.icon.rotate { 
-    transform: rotate(180deg); 
-    display:inline-flex;
-    align-items: baseline;
-    
+
 }
 
 .Content {
@@ -71,7 +69,8 @@
     text-align: left;
     background-color: #F6F6F6;
     overflow: hidden;
-    border-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
     width: 100%;
     color: black;
 
@@ -79,6 +78,7 @@
 
 .Content p {
     display: flex;
+    font-size: 18px;
     max-width: 100%;
     padding: 0px 0 0 15px;
 }
@@ -86,7 +86,9 @@
 .Content ul {
     padding-inline-start: 40px;
 }
+
 .Content ul li {
+    font-size: 18px;
     list-style: none;
     display: flex;
     max-width: 100%;
@@ -102,12 +104,12 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        gap:10px;
+        gap: 10px;
         margin-bottom: 10px;
         justify-content: space-around;
     }
 
-    
+
 
     .Button {
         font-size: 14px;
@@ -116,26 +118,28 @@
     }
 
     .Button img {
-        width:20px;
+        width: 20px;
     }
 
     .icon {
-        display:inline-flex;
-        padding-bottom: 5px;       
-    } 
-    .icon.rotate { 
-        transform: rotate(180deg) translateY(5px); 
-        display:inline-flex;        
+        display: inline-flex;
+        padding-bottom: 5px;
     }
-    
+
+    .icon.rotate {
+        transform: rotate(180deg) translateY(5px);
+        display: inline-flex;
+    }
+
     .Content p {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .Content ul {
         padding-inline-start: 20px;
     }
+
     .Content ul li {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
