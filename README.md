@@ -9,10 +9,10 @@
 </p>
 <p align="center">
     <img src="https://img.shields.io/badge/React-v18.3.1-blue">
-    <img src="https://img.shields.io/badge/React-Router-DOM-v6.27.0-blue">
-    <img src="https://img.shields.io/badge/React-DOM-v18.3.1-blue">
+    <img src="https://img.shields.io/badge/React--Router--DOM-v6.27.0-blue">
+    <img src="https://img.shields.io/badge/React--DOM-v18.3.1-blue">
     <img src="https://img.shields.io/badge/Axios-v1.7.7-blue">
-    <img src="https://img.shields.io/badge/React-Query-v3.39.3-blue">
+    <img src="https://img.shields.io/badge/React--Query-v3.39.3-blue">
     <img src="https://img.shields.io/badge/node--20.15.0-brightgreen">
     <img src="https://img.shields.io/badge/npm-10.9.0-blue">
     <img src="https://img.shields.io/badge/Vite-5.4.8-blue">
