@@ -1,0 +1,89 @@
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    max-height: fit-content;
+    row-gap: 25%;
+    justify-content: space-between;
+    line-height: 0;
+    margin-bottom:20px;
+}
+
+header .Logo {
+    width: 45%;
+}
+header img {
+    width: 30%;  
+    
+}
+
+header nav {
+    width: 45%;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: first baseline;
+    
+}
+
+header nav ul {
+    list-style-type: none;
+    padding:0;
+    display: inline-flex;
+}
+
+header nav ul li {
+    padding-left: 1em;
+    font-size: 1.5em;
+   
+}
+
+header nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+header nav a.active {
+    text-decoration: underline;
+}
+
+
+/* media less than 1024px like tablets, phone*/
+
+@media (max-width: 1024px) {
+    /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
+    header {
+        width: 100%;
+        padding:0;
+        row-gap: 20px;
+        margin-bottom:0.5em;
+    }
+    header .Logo {
+        width: 40%;
+        padding-bottom: 0;
+
+    }
+    header img {
+        width: 100%;
+        padding-bottom: 10px;
+
+    }
+    
+    header nav {
+        width: 45%;
+    }
+
+    header nav ul{
+        padding:0;
+        align-items: first baseline;
+        
+    }
+
+    header nav ul li {
+        padding-left: 1em;
+        font-size: 0.75em;
+        text-transform: uppercase;
+        
+    }
+    }

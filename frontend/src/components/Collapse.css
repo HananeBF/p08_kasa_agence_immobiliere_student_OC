@@ -1,0 +1,145 @@
+.CollapseComponent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 80%;
+    gap: 10px;
+    line-height: 1;
+
+}
+
+.CollapseElement {
+    display: flex;
+    width: 100%;
+    gap: 0;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.Button {
+    display: inline-flex;
+    background-color: #FF6060;
+    width: 100%;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    text-align: left;
+    margin-bottom: 0;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-weight: 700;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+.Button img {
+    width: 40px;
+}
+
+
+.icon {
+    display: inline-flex;
+    justify-content: flex-end;
+    transition: transform 500ms ease, translateY 500ms ease;
+    align-items: center;
+
+}
+
+.icon.rotate {
+    transform: rotate(180deg);
+    display: inline-flex;
+    align-items: baseline;
+
+}
+
+.Content {
+    display: flex;
+    margin: 0;
+    text-align: left;
+    background-color: #F6F6F6;
+    overflow: hidden;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 100%;
+    color: black;
+
+}
+
+.Content p {
+    display: flex;
+    font-size: 18px;
+    max-width: 100%;
+    padding: 0px 0 0 15px;
+}
+
+.Content ul {
+    padding-inline-start: 40px;
+}
+
+.Content ul li {
+    font-size: 18px;
+    list-style: none;
+    display: flex;
+    max-width: 100%;
+    padding-left: 0;
+
+
+}
+
+/* media less than 1024px like tablets, phone*/
+@media screen and (max-width: 1024px) {
+
+    .CollapseComponent {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-bottom: 10px;
+        justify-content: space-around;
+    }
+
+
+
+    .Button {
+        font-size: 14px;
+        padding-bottom: 5px;
+        padding-top: 0px;
+    }
+
+    .Button img {
+        width: 20px;
+    }
+
+    .icon {
+        display: inline-flex;
+        padding-bottom: 5px;
+    }
+
+    .icon.rotate {
+        transform: rotate(180deg) translateY(5px);
+        display: inline-flex;
+    }
+
+    .Content p {
+        font-size: 12px;
+    }
+
+    .Content ul {
+        padding-inline-start: 20px;
+    }
+
+    .Content ul li {
+        font-size: 12px;
+    }
+}

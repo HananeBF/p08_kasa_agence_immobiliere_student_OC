@@ -1,0 +1,31 @@
+.Rating {
+    display: inline-flex;
+    justify-content: flex-end;
+    width: 40%;
+    gap:10px;
+    margin-bottom: 20px;
+}
+
+.AllStars {
+    width: 36px;
+    height: 36px;
+}
+
+
+
+/* media less than 1024px like tablets, phone*/
+@media screen and (max-width: 1024px) {
+    .Rating {
+        display: flex;
+        width: 50%;
+        justify-content: flex-start;
+        align-items: first baseline;
+
+    }
+   
+
+    .AllStars {
+        width: 18px;
+        height: 18px;
+    }
+}

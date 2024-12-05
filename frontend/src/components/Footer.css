@@ -1,0 +1,36 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.FooterLogo {
+    display: flex;
+    width: 10%;
+  }
+
+.FooterText {
+    display: flex;
+    font-size: 24px;
+}
+
+/* media less than 1024px like tablets, phone*/
+
+@media screen and (max-width: 1024px) {
+    /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
+    .FooterLogo {
+        
+        width: 50%;
+      }
+    .FooterText {
+        width: 30%;
+        font-size: 12px;
+    }
+}
