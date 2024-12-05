@@ -1,6 +1,6 @@
 <div align="center">
 
-# Kasa - 
+# Kasa - Agence Immobilière 
 </div>
 
 <p align="center">
@@ -23,7 +23,7 @@
 </p>
 
 # A propos
-Ce projet est le front de l'applicatif Kasa, agence immobilière
+Ce projet est le front de l'applicatif Kasa, agence immobilière dans le cadre du Projet 08 du cusrsus Testeur Logiciel OC.
 
 
 ## Fonctionnalitées
