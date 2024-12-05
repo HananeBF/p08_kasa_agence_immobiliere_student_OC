@@ -1,9 +1,10 @@
 import React from 'react';
 import '@components/Rating.css'
 
+
 const Rating = ( { stars } ) => {
         const totalStars = 5
-        const filledStar = '⭐'
+        const filledStar = '★'
         const emptyStar = '☆' 
       
         const renderStars = (rating) => {
@@ -12,8 +13,8 @@ const Rating = ( { stars } ) => {
       
           return (
             <>
-              {'★'.repeat(fullStars)}
-              {'☆'.repeat(emptyStars)}
+              {filledStar.repeat(fullStars)}
+              {emptyStar.repeat(emptyStars)}
             </>
           )
         }

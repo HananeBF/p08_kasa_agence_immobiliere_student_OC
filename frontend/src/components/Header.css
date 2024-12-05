@@ -1,27 +1,31 @@
 header {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     width: 100%;
     max-height: fit-content;
-    gap: 25%;
+    row-gap: 25%;
     flex-grow: 4;
     justify-content: first baseline;
+    line-height: 0;
+    margin-bottom:2em;
 }
 
-header a img {
-    width: 60%;
+header .Logo {
+    width: 50%;
 }
 header img {
-    width: 80%;
-    max-height:min-content;
-    color: red;
+    width: 40%;
+    max-height: min-content;
     flex-grow: 2;
     justify-content: flex-start;
 }
 
 header nav {
+    width: 40%;
     display: inline-flex;
     justify-content: flex-end;
+    align-items: first baseline;
     flex-grow:2;
 }
 
@@ -34,12 +38,13 @@ header nav ul {
 header nav ul li {
     padding-left: 1em;
     font-size: 1.5em;
+   
 }
 
 header nav a {
     text-decoration: none;
     color: black;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 header nav a.active {
@@ -54,19 +59,29 @@ header nav a.active {
     header {
         width: 100%;
         padding:0;
-        gap: 5%;
+        row-gap: 1em;
+        margin-bottom:0.5em;
     }
-    header a img {
-        width: 50%;       
+    header .Logo {
+        width: 50%;
+        padding-bottom: 0;
+
     }
     
     header nav {
         width: 50%;
     }
 
+    header nav ul{
+        padding:0;
+        align-items: first baseline;
+        
+    }
+
     header nav ul li {
         padding-left: 1em;
         font-size: 0.75em;
         text-transform: uppercase;
+        
     }
     }

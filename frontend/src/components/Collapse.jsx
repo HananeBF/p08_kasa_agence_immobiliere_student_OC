@@ -3,9 +3,11 @@ import { useState } from "react";
 import "@components/Collapse.css";
 
 const Collapse = ({ title, children }) => {
-const [isOpen, setIsOpen] = useState(false);
+const [isOpen, setIsOpen] = useState(false)
 
-const toggleCollapse = () => { setIsOpen(!isOpen) }
+const toggleCollapse = () => { 
+  setIsOpen(!isOpen) 
+}
   
   
 
@@ -13,7 +15,7 @@ const toggleCollapse = () => { setIsOpen(!isOpen) }
     <div className="CollapseComponent">
       <div className="CollapseElement">
         <button onClick={toggleCollapse} type="button" className="Button">
-        {title} {isOpen ? <span className="Open">&#x2304;</span> : <span className="Close">&#x2303;</span> }
+        {title} {isOpen ? <span className="Open">&#x2303;</span> : <span className="Close">&#x2304;</span> }
         </button>
         {isOpen && <div className="Content">{children}</div>}
           

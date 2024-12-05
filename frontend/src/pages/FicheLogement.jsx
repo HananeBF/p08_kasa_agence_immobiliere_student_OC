@@ -3,16 +3,16 @@ import { useParams } from "react-router-dom";
 import { logementService } from "@/_services/logement.service.jsx";
 import "@pages/FicheLogement.css";
 import Slider from "@components/Slider";
-import Rating from "@components/Rating"
+import Rating from "@components/Rating";
 import Collapse from "@components/Collapse";
-import Error from "@/_utils/Error"
+import Error from "@/_utils/Error";
 
 const FicheLogement = () => {
   const [propertie, setPropertie] = useState([]);
   const [load, setLoad] = useState(true);
   const [slides, setSlides] = useState([]);
   const [rating, setRating] = useState(0);
-
+  const [error, setError] = useState(null);
 
   //Extract ID of the Location (idl)
   const { idl } = useParams();
@@ -24,15 +24,27 @@ const FicheLogement = () => {
         setPropertie(res.data);
         setLoad(false);
         setSlides(res.data.pictures);
-        setRating(res.data.rating)
+        setRating(res.data.rating);
+        setError(false);
+              
+     
       })
-      .catch((err) => <Error/>);
-  }, [])
+      .catch((err) => {
+        console.log(err);
+        setError(true);
+        setLoad(false);
+      })
+     
+  }, []);
 
   if (load) {
-    return <div>Chargement...</div>
-  }
-  
+  return <div className="Loading">Chargement...</div>;
+ }
+ if (error) {
+  return <Error />
+}
+
+
 
   return (
     <div className="FicheLogement">
@@ -45,37 +57,37 @@ const FicheLogement = () => {
           <h1>{propertie.title}</h1>
 
           <div className="LocationHost">
-            <span>{propertie.host.name}</span>
-            
-            <img src={propertie.host.picture} />
+            <span className="HostName">{propertie.host.name}</span>
+
+            <img className="HostName" src={propertie.host.picture} alt={propertie.host.name}/>
           </div>
         </div>
         <div className="Localisation">
           <p>{propertie.location}</p>
-          <div className="TagsLocation">
-            {propertie.tags.map((tag, id) => (
-              <span key={id}>{tag}</span>
-            ))}
+          <div className="inlineTagRating">
+            <div className="TagsLocation">
+              {propertie.tags.map((tag, id) => (
+                <span key={id}>{tag}</span>
+              ))}
+            </div>
+            <>
+              <Rating stars={rating} />
+            </>
           </div>
-          
         </div>
-        <>
-          <Rating stars={rating} />
-          </>
+
         <div className="DescriptionLocation">
-          
-            <Collapse title="Description">
-              <p>{propertie.description}</p>
-            </Collapse>
-          
-            <Collapse title="Equipements">
-              <ul>
-                {propertie.equipments.map((tools, id) => (
-                  <li key={id}>{tools}</li>
-                ))}
-              </ul>
-            </Collapse>
-          
+          <Collapse title="Description">
+            <p>{propertie.description}</p>
+          </Collapse>
+
+          <Collapse title="Equipements">
+            <ul>
+              {propertie.equipments.map((tools, id) => (
+                <li key={id}>{tools}</li>
+              ))}
+            </ul>
+          </Collapse>
         </div>
       </div>
     </div>

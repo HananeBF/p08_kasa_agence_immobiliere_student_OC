@@ -1,14 +1,26 @@
 .Rating {
     display:flex;
+    font-size: 40px;
     color: #FF6060;
-    font-size: 20px;
+    border: none;
+    
+    
+
     
 }
-.stars.emptyStars{
-    color: #F6F6F6;
+.emptyStar {
+    color: #E3E3E3;
 }
 
-.emptyStars {
+.filledStar {
     color: #FF6060;
 }
 
+
+/* media less than 1024px like tablets, phone*/
+@media screen and (max-width: 1024px) {
+    .Rating {
+        display:inline-flex;
+        font-size: 20px;
+        margin-bottom: 20px;
+}

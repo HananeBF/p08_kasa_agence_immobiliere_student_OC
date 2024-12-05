@@ -6,7 +6,7 @@ import logo from "@/assets/LOGO.svg";
 const Header = () => {
   return (
     <header className="Header">
-      <Link to={`./`}>
+      <Link to={`./`} className="Logo">
         <img src={logo} />
       </Link>
 

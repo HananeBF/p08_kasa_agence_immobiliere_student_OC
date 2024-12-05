@@ -34,36 +34,35 @@
     border: none;
     outline: none;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 500;
     justify-content: space-between;
-    transition: transform 0.3s ease;
+    transition-property: transform;
+    transition-duration: 2000ms;
+
 
 }
 
-@keyframes logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-  
-    to {
-      transform: rotate(180deg);
-    }
-  }
-.Button span.Open {
-    transform: rotate(180deg);
+
+
+.Open {
+    
+    padding-bottom: 0;
+    font-size: 25px;
+    font-weight: 500;
+    
 }
 
-.Button span.Close {
-    transform: rotate(180deg);
-}
 
-.Open,
 .Close {
-    
-    font-size: 30px;
-    font-weight: bold;
-    
+
+    font-size: 25px;
+    font-weight: 500;
+    padding-bottom: 0;
 }
+.Close:active {
+    transform: rotate(180deg);
+}
+
 
 
 .Content {
@@ -84,17 +83,51 @@
     padding: 0px 0 0 15px;
 }
 
-
+.Content ul {
+    padding-inline-start: 40px;
+}
 .Content ul li {
     list-style: none;
     display: flex;
     max-width: 100%;
     padding-left: 0;
-    
-    
+
+
 }
 
 /* media less than 1024px like tablets, phone*/
 @media screen and (max-width: 1024px) {
-    /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
+
+    .CollapseComponent {
+        display: flex;
+        width: 100%;
     }
+
+    .Button {
+        padding-bottom: 0px;
+        padding-top: 0px;
+    }
+
+    .Close, .Open {
+        padding-bottom: 0;
+    }
+
+    .Open,
+    .Close {
+
+        font-size: 26px;
+        font-weight: 500;
+
+    }
+
+    .Content p {
+        font-size: 14px;
+    }
+
+    .Content ul {
+        padding-inline-start: 20px;
+    }
+    .Content ul li {
+        font-size: 14px;
+    }
+}
