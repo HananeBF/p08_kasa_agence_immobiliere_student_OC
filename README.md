@@ -32,7 +32,7 @@ Ce projet est le front de l'applicatif Kasa, agence immobilière dans le cadre d
 - Manipulation des données avec une API Rest via Axios afin de disposer de tous les logements de l'agence
 - Chaque logement dispose de sa propre fiche 
 - Utilisation d'un caller.service dans le cas où la base URL de l'API venait à changer
-- Création de components réutilisable (Collapse, Slider) destructurés
+- Création de components réutilisables (Collapse, Slider) destructurés
 
 ## Pré-requis
 Pour fonctionner correctement ce projet utilise une API Rest disponible en local (voir plus bas).
