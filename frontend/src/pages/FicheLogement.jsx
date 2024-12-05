@@ -76,7 +76,7 @@ const FicheLogement = () => {
           <p>{propertie.description}</p>
         </Collapse>
 
-        <Collapse title="Equipements">
+        <Collapse title="Équipements">
           <ul>
             {propertie.equipments.map((tools, id) => (
               <li key={id}>{tools}</li>
