@@ -1,8 +1,13 @@
 .Error{
     width: 100%;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
     margin: 0;
+    gap:100px;
 }
 .Error404,
 .Oups {
@@ -14,20 +19,29 @@
 }
 
 .Error404 {
+    display: flex;
     font-size: 12em;
     font-weight: 600;
     
 }
 
 .Oups {
+    
     font-size: 1.5em;
-    font-weight: 200;
+    font-weight: 500;
+}
+
+.Oups .Break {
+    display: none;
+    width: 0;
 }
 
 .Retour a {
+    display: flex;
     font-size: 1em;
     text-decoration: underline solid black;
     font-weight: 300;
+    margin-bottom: 100px;
 }
 
 
@@ -35,4 +49,27 @@
 
 @media screen and (max-width: 1024px) {
     /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
+    .Error404,
+    .Oups {
+    color: #FF6060;
+    font-family: Montserrat;
+    line-height: normal;
+    padding-bottom: 20px;
+    margin: 0;
+}
+.Error404 {
+    margin-top:80px;
+    font-size: 8em;
+    font-weight: 600;
+    
+}
+.Oups {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.Oups .Break {
+    display:flex;
+    width: 50%;
+}
 }

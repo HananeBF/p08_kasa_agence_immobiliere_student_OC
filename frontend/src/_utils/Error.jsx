@@ -6,7 +6,7 @@ import './Error.css'
     return (
         <div className="Error">
             <p className='Error404'>404</p>
-            <p className='Oups'>Oups! La page que vous recherchez n'existe pas</p>
+            <p className='Oups'>Oups! La page que<span className="Break"> </span> vous demandez n'existe pas</p>
             <p className='Retour'><Link to="/Home">Retourner à la page d'accueil</Link></p>
         </div>
     )

@@ -19,5 +19,8 @@
 
 @media (max-width: 1024px) {
   /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
-
+  #root {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
   }

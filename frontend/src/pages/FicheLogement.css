@@ -1,72 +1,28 @@
-.Location {
+.Flat {
     display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.ImgLocation {
-    width: 100%;
-    height: 223px;
-    border-radius: 15px;
-    position: relative;
-    overflow: hidden;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.ImgLocation img {
-
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    object-fit: cover;
-    width: 100%;
-    border-radius: 25px;
-}
-.LocationTitle {
-    display: flex;
-    gap: 10%;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    width: 100%;
 }
-.LocationTitle h1 {
+
+.Localisation {
+    display: inline-flex;
+    gap: 10px;
+    width: 70%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.Localisation h1 {
     color: #FF6060;
     font-weight: 500;
     font-size: 36px;
     text-align: left;
     display: flex;
     justify-content: flex-start;
-}
-
-.LocationHost {
-    display:inline-flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-start;
-    color:#FF6060;
-    font-size: 18px;
-    width: 15%;
-    flex-wrap: wrap;
-    
-}
-.LocationHost .HostName{
-    display:flex;
-    width: 30%;
-    
-}
-.LocationHost .HostPict {
     display: flex;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-   
-    
-}
-.Localisation {
-    display:flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    width: 100%;
 }
 
 .Localisation p {
@@ -76,23 +32,15 @@
     text-align: left;
     display: flex;
     justify-content: flex-start;
-}
-
-.inlineTagRating {
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     width: 100%;
-    gap: 10%;
-    align-items: first baseline;
 }
 
 .TagsLocation {
-  display: flex;
-  justify-content: flex-start;
-  gap: 20px;
-  margin-bottom: 20px;
-  width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
 .TagsLocation span {
@@ -102,17 +50,52 @@
     padding-left: 2em;
     padding-right: 2em;
     border-radius: 15px;
-    font-size:1em;
+    font-size: 1em;
     font-weight: 600;
-    
+
 }
 
+.HostRating {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 2px;
+    align-items: flex-end;
+    justify-content: space-between;
 
+}
+
+.LocationHost {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    color: #FF6060;
+    font-size: 18px;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+.LocationHost .HostName {
+    display: inline-flex;
+    width: 15%;
+
+}
+
+.LocationHost .HostPict {
+    display: inline-flex;
+    width: 50%;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
 
 .DescriptionLocation {
     display: inline-flex;
     flex-direction: row;
-    
+
     align-items: flex-start;
     margin-bottom: 20px;
     gap: 10%;
@@ -122,44 +105,39 @@
 
 /* media less than 1024px like tablets, phone*/
 @media screen and (max-width: 1024px) {
+
     /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
-    .LocationTitle h1 {
+
+    .Flat {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .Localisation {
+        width: 100%;
+    }
+
+    h1 {
         font-size: 20px;
     }
 
     .Localisation p {
         font-size: 12px;
     }
-    .LocationHost {
-        display:flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: flex-end;
-        color:#FF6060;
-        font-size: 12px;
-        width: 60%;
-        flex-wrap: wrap;
-    }
-    
-   
 
-    .inlineTagRating {
+
+
+    .TagsLocation {
+        width: 100%;
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        flex-direction: row;
         justify-content: flex-start;
-        width: 100%;
-        
+        gap: 10px;
 
     }
 
-    .inlineTagRating .TagsLocation {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        
-    }
-    
     .TagsLocation span {
         background-color: #FF6060;
         color: #F6F6F6;
@@ -169,11 +147,46 @@
         border-radius: 15px;
         font-size: 10px;
         font-weight: 500;
-        
-    }
-   
 
-    
+    }
+
+    .HostRating {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 1em;
+        align-items: center;
+        gap:5px;
+    }
+
+
+    .LocationHost {
+        display: inline-flex;
+        width: 50%;
+        flex-wrap: wrap; 
+        justify-content: flex-end;
+        align-items: center;
+        gap: 20px;
+        
+
+    }
+
+    .LocationHost .HostName {
+        width: 20%;
+        font-size: 12px;    
+        align-items: center;
+        padding-bottom: 0;
+
+    }
+
+    .LocationHost .HostPict {
+        width: 30%;
+        width: 32px;
+        height: 32px; 
+        align-items: center;
+    }
+
     .DescriptionLocation {
         display: flex;
         flex-direction: column;

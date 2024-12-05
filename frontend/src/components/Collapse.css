@@ -20,7 +20,7 @@
 
 
 .Button {
-    display: flex;
+    display: inline-flex;
     background-color: #FF6060;
     width: 100%;
     text-decoration: none;
@@ -29,41 +29,41 @@
     text-align: left;
     align-items: center;
     margin-bottom: 0;
-    padding: 10px;
     cursor: pointer;
     border: none;
     outline: none;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     justify-content: space-between;
-    transition-property: transform;
-    transition-duration: 2000ms;
-
-
-}
-
-
-
-.Open {
-    
-    padding-bottom: 0;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 15px;
     font-size: 25px;
     font-weight: 500;
+
+}
+.Button img {
+    width:40px;
+}
+
+
+.icon {
+    display:inline-flex;
+    justify-content: flex-end;
+    
+    transition: transform 500ms ease, translateY 500ms ease; 
+    align-items: baseline;
+   
+} 
+.icon.rotate { 
+    transform: rotate(180deg); 
+    display:inline-flex;
+    align-items: baseline;
     
 }
-
-
-.Close {
-
-    font-size: 25px;
-    font-weight: 500;
-    padding-bottom: 0;
-}
-.Close:active {
-    transform: rotate(180deg);
-}
-
-
 
 .Content {
     display: flex;
@@ -100,26 +100,34 @@
 
     .CollapseComponent {
         display: flex;
+        flex-direction: column;
         width: 100%;
+        gap:10px;
+        margin-bottom: 10px;
+        justify-content: space-around;
     }
 
+    
+
     .Button {
-        padding-bottom: 0px;
+        font-size: 14px;
+        padding-bottom: 5px;
         padding-top: 0px;
     }
 
-    .Close, .Open {
-        padding-bottom: 0;
+    .Button img {
+        width:20px;
     }
 
-    .Open,
-    .Close {
-
-        font-size: 26px;
-        font-weight: 500;
-
+    .icon {
+        display:inline-flex;
+        padding-bottom: 5px;       
+    } 
+    .icon.rotate { 
+        transform: rotate(180deg) translateY(5px); 
+        display:inline-flex;        
     }
-
+    
     .Content p {
         font-size: 14px;
     }

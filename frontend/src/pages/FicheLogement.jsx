@@ -43,49 +43,46 @@ const FicheLogement = () => {
 
   return (
     <div className="FicheLogement">
-      <div className="Location">
-        <>
-          <Slider images={slides} />
-        </>
+      <Slider images={slides} />
 
-        <div className="LocationTitle">
-          <h1>{propertie.title}</h1>
-          <div className="LocationHost">
-          <span className="HostName">{propertie.host.name}</span>
-
-          <img
-            className="HostPict"
-            src={propertie.host.picture}
-            alt={propertie.host.name}
-          />
-        </div>
-        </div>
-        
+      <div className="Flat">
         <div className="Localisation">
+          <h1>{propertie.title}</h1>
+
           <p>{propertie.location}</p>
-          <div className="inlineTagRating">
-            <div className="TagsLocation">
-              {propertie.tags.map((tag, id) => (
-                <span key={id}>{tag}</span>
-              ))}
-            </div>
-            <Rating rating={rating} />
+
+          <div className="TagsLocation">
+            {propertie.tags.map((tag, id) => (
+              <span key={id}>{tag}</span>
+            ))}
           </div>
         </div>
+        <div className="HostRating">
+          <div className="LocationHost">
+            <span className="HostName">{propertie.host.name}</span>
 
-        <div className="DescriptionLocation">
-          <Collapse title="Description">
-            <p>{propertie.description}</p>
-          </Collapse>
-
-          <Collapse title="Equipements">
-            <ul>
-              {propertie.equipments.map((tools, id) => (
-                <li key={id}>{tools}</li>
-              ))}
-            </ul>
-          </Collapse>
+            <img
+              className="HostPict"
+              src={propertie.host.picture}
+              alt={propertie.host.name}
+            />
+          </div>
+          <Rating rating={rating} />
         </div>
+      </div>
+
+      <div className="DescriptionLocation">
+        <Collapse title="Description">
+          <p>{propertie.description}</p>
+        </Collapse>
+
+        <Collapse title="Equipements">
+          <ul>
+            {propertie.equipments.map((tools, id) => (
+              <li key={id}>{tools}</li>
+            ))}
+          </ul>
+        </Collapse>
       </div>
     </div>
   );
