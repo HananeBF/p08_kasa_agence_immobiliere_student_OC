@@ -26,25 +26,20 @@ const FicheLogement = () => {
         setSlides(res.data.pictures);
         setRating(res.data.rating);
         setError(false);
-              
-     
       })
       .catch((err) => {
         console.log(err);
         setError(true);
         setLoad(false);
-      })
-     
+      });
   }, []);
 
   if (load) {
-  return <div className="Loading">Chargement...</div>;
- }
- if (error) {
-  return <Error />
-}
-
-
+    return <div className="Loading">Chargement...</div>;
+  }
+  if (error) {
+    return <Error />;
+  }
 
   return (
     <div className="FicheLogement">
@@ -55,13 +50,17 @@ const FicheLogement = () => {
 
         <div className="LocationTitle">
           <h1>{propertie.title}</h1>
-
           <div className="LocationHost">
-            <span className="HostName">{propertie.host.name}</span>
+          <span className="HostName">{propertie.host.name}</span>
 
-            <img className="HostName" src={propertie.host.picture} alt={propertie.host.name}/>
-          </div>
+          <img
+            className="HostPict"
+            src={propertie.host.picture}
+            alt={propertie.host.name}
+          />
         </div>
+        </div>
+        
         <div className="Localisation">
           <p>{propertie.location}</p>
           <div className="inlineTagRating">
@@ -70,9 +69,7 @@ const FicheLogement = () => {
                 <span key={id}>{tag}</span>
               ))}
             </div>
-            <>
-              <Rating stars={rating} />
-            </>
+            <Rating rating={rating} />
           </div>
         </div>
 

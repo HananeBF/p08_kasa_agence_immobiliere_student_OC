@@ -107,11 +107,7 @@
     
 }
 
-.inlineTagRating  .Rating{
-    display: inline-flex;
-    justify-content: flex-end;
-    width: 40%;
-}
+
 
 .DescriptionLocation {
     display: inline-flex;
@@ -140,10 +136,9 @@
         justify-content: flex-end;
         align-items: flex-end;
         color:#FF6060;
-        font-size: 14px;
+        font-size: 12px;
         width: 60%;
         flex-wrap: wrap;
-        
     }
     
    
@@ -176,11 +171,7 @@
         font-weight: 500;
         
     }
-    .inlineTagRating .Rating {
-        display: flex;
-        width: 100%;
-        justify-content: flex-start;
-    }
+   
 
     
     .DescriptionLocation {
