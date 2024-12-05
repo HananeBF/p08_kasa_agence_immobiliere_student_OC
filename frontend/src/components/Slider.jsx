@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 
-import "@components/Slider.css";
+import "@components/Slider.css"
 
 const Slider = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -13,9 +13,9 @@ const Slider = ({ images }) => {
   const prevImage = () => {
     setCurrentIndex(
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
-    );
+    )
    
-  };
+  }
 
   return (
     <div className="Slider">
@@ -26,6 +26,7 @@ const Slider = ({ images }) => {
             alt={`Photo ${currentIndex + 1}`}
             className="Slide"
           />
+          {/* pour selon la taille du Array d'images contenues dans le slider, j'ajoute des boutons de navigations gauche et droite ainsi qu'un commpteur qui prend le numéro de l'index + 1 sur le total du nombre d'image. Si l'index supérieur à un ces éléments s'affiche */}
           <>
             {images.length > 1 && (
               <div className="Counter">
@@ -46,7 +47,7 @@ const Slider = ({ images }) => {
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Slider;
+export default Slider

@@ -1,7 +1,7 @@
-import React from "react";
-import Picture from "@/assets/PictureAPropos.png";
-import "@pages/APropos.css";
-import Collapse from "@components/Collapse";
+import React from "react"
+import Picture from "@/assets/PictureAPropos.png"
+import "@pages/APropos.css"
+import Collapse from "@components/Collapse"
 
 const APropos = () => {
   return (
@@ -52,7 +52,7 @@ const APropos = () => {
         </>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default APropos;
+export default APropos

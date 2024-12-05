@@ -1,6 +1,6 @@
-import React from "react";
-import { useState } from "react";
-import "@components/Collapse.css";
+import React from "react"
+import { useState } from "react"
+import "@components/Collapse.css"
 import Arrow from "@/assets/arrow_down.svg"
 
 const Collapse = ({ title, children }) => {
@@ -15,6 +15,7 @@ const toggleCollapse = () => {
   return (
     <div className="CollapseComponent">
       <div className="CollapseElement">
+        {/* Si la personne click, l'état devient isOpen : déplier le contenu masqué children plus bas et effectuer une rotation de l'icone Arrow */}
         <button onClick={toggleCollapse} type="button" className="Button">
         {title} <span className={`icon ${isOpen ? 'rotate' : ''}`}><img src={Arrow}/></span> 
         </button>
@@ -23,7 +24,7 @@ const toggleCollapse = () => {
         
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Collapse;
+export default Collapse

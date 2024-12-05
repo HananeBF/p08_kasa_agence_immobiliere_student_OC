@@ -81,6 +81,8 @@
 .LocationHost .HostName {
     display: inline-flex;
     width: 15%;
+    margin-right: 10px;
+    text-align: right;
 
 }
 
@@ -171,17 +173,17 @@
     }
 
     .LocationHost .HostName {
-        width: 20%;
-        font-size: 12px;    
+        width: 25%;
+        font-size: 12px;
         align-items: center;
         padding-bottom: 0;
 
     }
 
     .LocationHost .HostPict {
-        width: 40%;
+        max-width: 40%;
         width: 36px;
-        height: 36px; 
+        height: 36px;   
         align-items: center;
     }
 

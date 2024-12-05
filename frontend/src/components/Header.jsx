@@ -1,7 +1,7 @@
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
-import "@components/Header.css";
-import logo from "@/assets/LOGO.svg";
+import React from "react"
+import { Link, NavLink } from "react-router-dom"
+import "@components/Header.css"
+import logo from "@/assets/LOGO.svg"
 
 const Header = () => {
   return (
@@ -22,6 +22,6 @@ const Header = () => {
         </ul>
       </nav>
     </header>
-  );
-};
-export default Header;
+  )
+}
+export default Header

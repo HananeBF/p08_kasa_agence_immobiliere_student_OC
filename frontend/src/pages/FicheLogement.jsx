@@ -1,44 +1,47 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { logementService } from "@/_services/logement.service.jsx";
-import "@pages/FicheLogement.css";
-import Slider from "@components/Slider";
-import Rating from "@components/Rating";
-import Collapse from "@components/Collapse";
-import Error from "@/_utils/Error";
+import React, { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
+import { logementService } from "@/_services/logement.service.jsx"
+import "@pages/FicheLogement.css"
+import Slider from "@components/Slider"
+import Rating from "@components/Rating"
+import Collapse from "@components/Collapse"
+import Error from "@/_utils/Error"
 
 const FicheLogement = () => {
-  const [propertie, setPropertie] = useState([]);
-  const [load, setLoad] = useState(true);
-  const [slides, setSlides] = useState([]);
-  const [rating, setRating] = useState(0);
-  const [error, setError] = useState(null);
+  const [propertie, setPropertie] = useState([])
+  const [load, setLoad] = useState(true)
+  const [slides, setSlides] = useState([])
+  const [rating, setRating] = useState(0)
+  const [error, setError] = useState(null)
 
   //Extract ID of the Location (idl)
-  const { idl } = useParams();
+  const { idl } = useParams()
 
   useEffect(() => {
     logementService
       .getLocation(idl)
       .then((res) => {
-        setPropertie(res.data);
-        setLoad(false);
-        setSlides(res.data.pictures);
-        setRating(res.data.rating);
-        setError(false);
+        setPropertie(res.data)
+        setLoad(false)
+        setSlides(res.data.pictures)
+        setRating(res.data.rating)
+        setError(false)
       })
       .catch((err) => {
-        console.log(err);
-        setError(true);
-        setLoad(false);
-      });
-  }, []);
+
+        // si l'erreur est catché par la console, comme idl (id du logement) absent de l'api, je laisse le state de Load à false pour laisser s'afficher l'Error
+        console.log(err)
+        setError(true)
+        setLoad(false)
+      })
+  }, [])
 
   if (load) {
-    return <div className="Loading">Chargement...</div>;
+    return <div className="Loading">Chargement...</div>
   }
+
   if (error) {
-    return <Error />;
+    return <Error />
   }
 
   return (
@@ -85,6 +88,6 @@ const FicheLogement = () => {
         </Collapse>
       </div>
     </div>
-  );
-};
-export default FicheLogement;
+  )
+}
+export default FicheLogement
